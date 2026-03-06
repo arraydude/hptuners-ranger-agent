@@ -45,6 +45,12 @@ Shared engine with Bronco Raptor (418 HP), Explorer ST (400 HP), Lincoln Aviator
 - `sources/` — Synthesized reference material (markdown)
 - `ford-ranger-tuning/` — Claude Code skill (SKILL.md + references/)
 
+## Official PDFs (read with pdftotext via Bash, not the Read tool)
+
+| File | Content |
+|------|---------|
+| `VCMEditorUserGuide.pdf` | HP Tuners VCM Editor User Guide (Oct 2025, 4,500+ lines) — UI layout, table editing, compare tools, template editor, flash procedures |
+
 ## Sources
 
 | File | Content |

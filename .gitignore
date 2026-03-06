@@ -1,1 +1,3 @@
 .DS_Store
+# PDFs are too large for git — read with pdftotext via Bash
+*.pdf
