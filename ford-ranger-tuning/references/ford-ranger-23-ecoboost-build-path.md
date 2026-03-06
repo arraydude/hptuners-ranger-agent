@@ -173,6 +173,16 @@ For someone building progressively:
 10. **Head studs** (essential for Stage 3+ reliability)
 11. **Built block** (Stage 4 — competition builds only)
 
+## Quarter-Mile Reference Data
+
+| Configuration | ET | Trap Speed |
+|---|---|---|
+| Stock | ~15.0s | ~90 mph |
+| Stage 1 tune (93 octane) | ~14.25s | ~93.8 mph |
+| Tune + downpipe | ~14.0s | ~95+ mph |
+| Full bolt-on + tune | High 13s | ~98–100 mph |
+| Turbo upgrade + full bolt-on | Low-mid 13s | ~100+ mph |
+
 ## Popular Tuning Providers (Ford Ranger 2.3L EcoBoost)
 
 | Provider | Platform | Notes |

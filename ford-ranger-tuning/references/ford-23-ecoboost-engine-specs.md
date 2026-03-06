@@ -89,9 +89,10 @@ The Ford 2.3L EcoBoost is a turbocharged inline-4 DOHC engine used across multip
 ## Fuel System
 
 - **Injection:** High-pressure gasoline direct injection (GDI), 4 injectors
-- **Stock Rail Pressure:** 150 bar / 2,150 PSI
+- **Stock Rail Pressure:** 200 bar / 2,900 PSI
 - **HPFP:** Mechanically driven by camshaft pump lobe (4x4.4mm cam lobe)
 - **HPFP Drive:** Spins at half crank speed, RPM-dependent
+- **OEM Injector Geometric Volume:** 1.12 cc/rev
 - **Estimated Stock Injector Flow:** ~1,100–1,300 cc/min at 100 bar (not officially published)
 - **No port injection** on 2019–2024 models (GDI only — catch can recommended to mitigate carbon buildup)
 

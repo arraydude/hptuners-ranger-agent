@@ -51,20 +51,29 @@ Load the relevant reference based on the user's question:
 
 ## Datalog Analysis
 
-When reviewing datalogs, check these red flags:
+When reviewing datalogs, check these critical indicators first:
+
+### Source PIDs (verify correct operating mode)
+
+| PID | Expected at WOT | Problem Value | Meaning |
+|-----|-----------------|---------------|---------|
+| Spark Source | 2 (Borderline) | 5 (Cyl Pressure/LSPI) | Hitting protection tables |
+| Fuel Source | 5 (Power Demand) | 0 (Stoichiometric) | WOT enrichment not active |
+| Airflow Limit Source | 0 (No Clip) | 2 (WG/Turbo), 5 (LSPI) | Something is limiting airflow |
+| OAR | Near -1.0 | Trending toward +1.0 | Tune too aggressive or bad fuel |
+
+### Red Flag Thresholds
 
 | Parameter | Concern Threshold | Action |
 |-----------|------------------|--------|
-| Knock Retard | Any positive value | Reduce timing, check fuel quality, check for LSPI |
+| Knock Count | Sustained across pulls | Reduce timing, check fuel quality, check plugs |
 | WGDC Actual | Sustained >90% | Turbo near max — lower targets or upgrade hardware |
 | Boost Pressure | >27 PSI on stock turbo | Beyond safe stock turbo limit |
 | AFR / Lambda | Leaner than 0.85λ at WOT | Dangerously lean — reduce boost or enrich fueling |
-| IAT | >55°C under boost | Intercooler inadequate — heat soak |
+| IAT | >38°C (100°F) under boost | Power limiting begins — intercooler upgrade needed |
 | ECT | >115°C | Cooling system issue |
-| EGT | >870°C (1,600°F) | Exhaust valve damage risk |
 | Fuel Rail Pressure | Drops under load | HPFP can't keep up — upgrade HPFP |
 | Fuel Trims | Beyond ±5% | Investigate SD calibration, injectors, or vacuum leaks |
-| Injector Duty Cycle | >85% | Injector capacity limit — upgrade injectors |
 
 ## Stage Recommendations
 
