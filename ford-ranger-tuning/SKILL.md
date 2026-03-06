@@ -1,109 +1,90 @@
 ---
-name: ford-ranger-tuning
-description: Ford Ranger 2.3L EcoBoost tuning assistant using HP Tuners VCM Suite. Use when the user asks about Ford Ranger tuning, EcoBoost calibration, HP Tuners VCM Editor, datalog analysis, boost/timing/fuel targets, tuning stages, ethanol/flex fuel setup, mod recommendations, or build planning for the 2019-2026+ Ford Ranger 2.3L EcoBoost. Triggers on mentions of Ford Ranger, 2.3 EcoBoost, HP Tuners, VCM Editor, VCM Scanner, MPVI3, WGDC, Driver Demanded Torque, Speed Density, 10R80 transmission tuning, or any Ford Ranger performance tuning topic.
+name: ford-ranger-raptor-tuning
+description: Ford Ranger Raptor 3.0L EcoBoost V6 twin-turbo tuning assistant using HP Tuners VCM Suite. Use when the user asks about Ford Ranger Raptor tuning, 3.0L EcoBoost calibration, HP Tuners VCM Editor, datalog analysis, boost/timing/fuel targets, tuning stages, ethanol/flex fuel setup, mod recommendations, or build planning for the 2024-2026 Ford Ranger Raptor 3.0L EcoBoost. Triggers on mentions of Ford Ranger Raptor, 3.0 EcoBoost, 3.0L V6, twin-turbo EcoBoost, HP Tuners, VCM Editor, VCM Scanner, MPVI3, MPVI4, RTD4, MG1CS036, KOM, TIP, Driver Demanded Torque, Wastegate Position, Speed Density, 10R80 transmission, Garrett PowerMax, Nostrum HPFP, or any Ford Ranger Raptor performance tuning topic.
 ---
 
-# Ford Ranger 2.3L EcoBoost Tuning Assistant
+# Ford Ranger Raptor 3.0L EcoBoost V6 Tuning Assistant
 
 ## Vehicle Identification
 
-Identify the vehicle and model year before answering. Use these cues:
+Identify the vehicle and model year before answering:
 
-| Model Year | Engine | PCM | Block | Key Traits |
-|------------|--------|-----|-------|------------|
-| 2019–2023 (5th Gen) | 2.3L EcoBoost | Bosch | Open-deck aluminum | 10.0:1 CR, GDI only, 150 bar fuel rail, pre-2020 block prone to head gasket issues |
-| 2024 (6th Gen) | 2.3L EcoBoost | Bosch | Open-deck aluminum | Same engine, redesigned chassis, 2.7L V6 also available |
-| 2025+ (6th Gen) | 2.3L EcoBoost MPC | Bosch | MPC architecture | NEW engine: 84x102mm, 10.634:1 CR, port+DI (350 bar), different tuning approach |
+| Model Year | Engine | PCM | Key Traits |
+|------------|--------|-----|------------|
+| 2024–2026 (6th Gen NA) | 3.0L EcoBoost V6 Twin-Turbo | Bosch MG1CS036 | 405 HP, CGI block, forged internals, parallel twin 39mm BorgWarner turbos, electronic WG, factory anti-lag in Baja mode |
+| 2022–2023 (Global) | 3.0L EcoBoost V6 Twin-Turbo | Bosch MG1CS036 | Same engine, market-dependent power (292–397 HP) |
 
-If the user has a 2025+ Ranger, note that it uses a **completely different engine** (MPC architecture) with dual fuel injection. Tuning guidance for 2019–2024 does NOT apply directly.
+This engine is shared with the Bronco Raptor, Explorer ST, and Lincoln Aviator. Tuning principles are the same, but transmission calibrations are NOT cross-compatible.
 
-If unclear, ask the user for their model year and current mods.
+If unclear, ask the user for their model year, market, and current mods.
 
 ## Core Tuning Principle
 
-The Ford 2.3L EcoBoost uses a **torque-based PCM strategy** with **Speed Density** airflow. The tuning order is:
+The 3.0L EcoBoost operates under **closed-loop torque control full time**. The tuning order is:
 
-1. **Torque limiters** (raise the ceiling)
-2. **Driver Demanded Torque** (tell the PCM to request more power)
-3. **Torque model** (recalculate with Torque Inverse Calculator)
-4. **Load / boost targets** (increase airflow demand)
-5. **Spark advance** (optimize combustion)
-6. **Fueling / AFR targets** (ensure safe mixtures)
-7. **Transmission** (shift points, firmness, TC lockup)
+1. **LSPI limits** (raise after 3,500 RPM — fixes popcorn/combustion stability)
+2. **Torque limiters** (Table 861 → 650–700 range)
+3. **Load limits** (adjust enough to prevent throttle closures)
+4. **TIP Desired Max** (lower first to test at reduced boost)
+5. **Driver Demand** (conservative: +50 Nm mid, +25 Nm top)
+6. **Torque model** (forward/inverse must be mathematically aligned)
+7. **Borderline timing** (primary WOT timing tables for pump gas)
+8. **Fuel targets** (Desired Lambda / Power Demand table)
+9. **Wastegate Position Base** (feed-forward table for smooth boost)
+10. **Transmission** (shift schedule, pressures, TCC lockup)
 
-Never advise raising boost without addressing torque limiters and Driver Demand first — the PCM will close the throttle to maintain the torque ceiling.
+Never advise raising boost without addressing torque/load limits first — the PCM will close the throttle.
 
 ## Reference Files
 
-Load the relevant reference based on the user's question:
+### Engine Specs (load for specs, model year differences, known issues, vehicle identification)
+- Read [references/ford-30-ecoboost-engine-specs.md](references/ford-30-ecoboost-engine-specs.md)
 
-### Engine Specs (load when asked about specs, mods compatibility, model year differences, or vehicle identification)
-- Read [references/ford-23-ecoboost-engine-specs.md](references/ford-23-ecoboost-engine-specs.md)
+### Tuning Guide (load for tuning, calibration, tables, HP Tuners parameters, datalogs, boost control)
+- Read [references/ford-30-ecoboost-tuning-guide.md](references/ford-30-ecoboost-tuning-guide.md)
 
-### Tuning Guide (load when asked about tuning, calibration, tables, HP Tuners parameters, datalogs, or boost control)
-- Read [references/ford-23-ecoboost-tuning-guide.md](references/ford-23-ecoboost-tuning-guide.md)
+### Build Path (load for stages, mods, upgrade order, power targets, ethanol builds, turbo upgrades)
+- Read [references/ford-ranger-raptor-30-build-path.md](references/ford-ranger-raptor-30-build-path.md)
 
-### Build Path (load when asked about stages, mods, upgrade order, power targets, or ethanol builds)
-- Read [references/ford-ranger-23-ecoboost-build-path.md](references/ford-ranger-23-ecoboost-build-path.md)
-
-### HP Tuners Platform (load when asked about HP Tuners features, VCM Editor, VCM Scanner, MPVI hardware, credits, licensing, or read/write workflow)
+### HP Tuners Platform (load for VCM Editor, VCM Scanner, MPVI hardware, credits, licensing)
 - Read [references/hptuners-platform-overview.md](references/hptuners-platform-overview.md)
 
 ## Datalog Analysis
 
-When reviewing datalogs, check these critical indicators first:
-
-### Source PIDs (verify correct operating mode)
+### Source PIDs (verify correct operating mode first)
 
 | PID | Expected at WOT | Problem Value | Meaning |
 |-----|-----------------|---------------|---------|
 | Spark Source | 2 (Borderline) | 5 (Cyl Pressure/LSPI) | Hitting protection tables |
 | Fuel Source | 5 (Power Demand) | 0 (Stoichiometric) | WOT enrichment not active |
-| Airflow Limit Source | 0 (No Clip) | 2 (WG/Turbo), 5 (LSPI) | Something is limiting airflow |
-| OAR | Near -1.0 | Trending toward +1.0 | Tune too aggressive or bad fuel |
+| Airflow Limit Source | 0 (No Clip) | 2 (WG/Turbo), 5 (LSPI) | Something limiting airflow |
+| KOM | +1 | Dropping toward -1 | Tune aggressive or bad fuel |
 
 ### Red Flag Thresholds
 
 | Parameter | Concern Threshold | Action |
 |-----------|------------------|--------|
-| Knock Count | Sustained across pulls | Reduce timing, check fuel quality, check plugs |
-| WGDC Actual | Sustained >90% | Turbo near max — lower targets or upgrade hardware |
-| Boost Pressure | >27 PSI on stock turbo | Beyond safe stock turbo limit |
-| AFR / Lambda | Leaner than 0.85λ at WOT | Dangerously lean — reduce boost or enrich fueling |
-| IAT | >38°C (100°F) under boost | Power limiting begins — intercooler upgrade needed |
-| ECT | >115°C | Cooling system issue |
-| Fuel Rail Pressure | Drops under load | HPFP can't keep up — upgrade HPFP |
-| Fuel Trims | Beyond ±5% | Investigate SD calibration, injectors, or vacuum leaks |
+| Knock Count | Sustained across pulls | Reduce timing, check fuel, check plugs |
+| TIP Actual > TIP Desired Max | Throttle closures | Lower TIP ceiling or reduce boost target |
+| Turbo PID I-Term | Beyond +/-5% | Poor wastegate tuning, oscillation |
+| Throttle Closures | >20% of max at redline | TIP/boost target too high |
+| Fuel Rail Pressure | Drops under load | HPFP limit — upgrade Nostrum |
+| LTFT | Beyond +/-10% | Systemic fueling problem |
+| KOM | Trending toward -1 | Tune too aggressive or poor fuel quality |
 
-## Stage Recommendations
+## Key Reminders
 
-When asked "what stage should I get" or "what mods do I need":
-
-1. Ask about current mods, fuel availability (87/91/93/E30/E85), and goals
-2. Load the build path reference
-3. Match to the appropriate stage
-4. List required supporting mods (don't let users skip hardware for higher stages)
-5. Emphasize that a tune without supporting hardware can cause damage
-6. Highlight LSPI prevention for all stages
-
-## LSPI Warning
-
-Low Speed Pre-Ignition is the #1 safety concern on the 2.3L EcoBoost. Always remind users:
-- Use API SP / ILSAC GF-6 rated oil
-- Avoid heavy throttle below 3,000 RPM
-- Downshift before accelerating hard
-- Install colder spark plugs when tuned
-- Do NOT disable combustion stability limits at low RPM
+- **ECU swaps boost for spark** — this is normal, not a bug
+- **Reset adaptives after every flash** — idle, drive normally 10–15 min, let KOM settle
+- **Leave spark mostly stock, refine boost** — experienced tuners report best results
+- **LSPI tables are critical safety** — never blank out or disable
+- **CGI block + forged internals** — robust bottom end, 700+ whp demonstrated on stock internals
+- **Stock fuel system bottleneck** — adequate for ~450–500 whp on 93, requires Nostrum HPFP for ethanol
 
 ## Platform & Hardware
 
-- **Tuning Platform:** HP Tuners (MPVI3/MPVI4 + VCM Suite)
-- **Credits Required:** 4 Universal Credits per PCM (TCM is separate)
+- **Tuning Platform:** HP Tuners (MPVI3/MPVI4/RTD4 + VCM Suite BETA)
+- **PCM:** Bosch MG1CS036 — direct OBDII flash, no PCM swap required
+- **Credits Required:** 4 Universal Credits (PCM); TCM separate
+- **Older MPVI2 NOT supported** — must use MPVI3, MPVI4, or RTD4
 - **Software:** VCM Suite (free download, Windows only)
-- **Read/Edit/Save is free** — credits only consumed when flashing
-- **Standalone datalogging works without a license**
-
-When recommending HP Tuners setup:
-- MPVI3 or MPVI4 hardware + 4 credits minimum
-- PROLINK+ cable recommended for wideband AFR logging
-- Remote tuning via RTD device if working with a professional tuner

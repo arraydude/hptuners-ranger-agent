@@ -216,4 +216,4 @@ Credits are the currency to license vehicle modules to your MPVI device. Think o
 | **Livernois MyCalibrator** | Pre-loaded calibrations, easy to use | Less custom tunability than HP Tuners |
 | **nGauge RTD** | Remote tuning without laptop | Depends on tuner for calibration files |
 
-HP Tuners is the recommended platform for custom tuning the Ford Ranger 2.3L EcoBoost due to full PCM + TCM access and the largest tuner community.
+HP Tuners is the recommended platform for custom tuning the Ford Ranger Raptor 3.0L EcoBoost V6 due to full MG1CS036 PCM + 10R80 TCM access and the largest tuner community. HP Tuners achieved first-to-market direct OBDII flashing of the MG1CS036 (no PCM swap/unlock required). VCM Suite support is currently in BETA for MG1CS036 vehicles. Only MPVI3, MPVI4, and RTD4 are supported — older MPVI2 devices are NOT compatible.
