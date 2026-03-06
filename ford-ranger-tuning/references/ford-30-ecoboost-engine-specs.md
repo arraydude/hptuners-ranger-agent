@@ -34,13 +34,20 @@ The Ford 3.0L EcoBoost is a twin-turbocharged 60-degree V6 engine. In the Ranger
 |-----------|-------|
 | Displacement | 2,956 cc (3.0L) |
 | Configuration | V6, 60-degree, DOHC, 24-valve, twin-turbo |
+| Bore | 85.3 mm |
+| Stroke | 86.0 mm |
+| Compression Ratio | 9.5:1 |
 | Block Material | Compacted Graphite Iron (CGI) with die-cast aluminum ladder frame skirt (two-piece block) |
-| Cylinder Head | Aluminum |
+| Cylinder Head | Aluminum with integrated water-cooled exhaust manifolds |
 | Crankshaft | Forged steel |
 | Connecting Rods | Forged steel |
 | Pistons | Forged |
 | Camshafts | Forged |
-| Oil | 5W-30 |
+| Firing Order | 1-4-2-5-3-6 |
+| Engine Weight | 409 lbs (186 kg) |
+| Oil | 5W-30, 6.0 qt capacity |
+
+**Lineage:** Derived from the 2.7L EcoBoost "Nano" series — bored from 83mm to 85.3mm, stroke from 83mm to 86mm.
 
 **Note:** CGI block is significantly stronger than aluminum — compacted graphite iron has roughly 75% greater tensile strength and approximately double the fatigue strength of conventional gray iron, while being lighter than cast iron. Combined with forged internals, the 3.0L EcoBoost has a robust bottom end.
 
@@ -63,7 +70,7 @@ The Ford 3.0L EcoBoost is a twin-turbocharged 60-degree V6 engine. In the Ranger
 | Parameter | Value |
 |-----------|-------|
 | Type | Parallel twin turbo (NOT sequential) |
-| Turbo Model | BorgWarner 39mm (GT1752S-type) |
+| Turbo Model | 39mm compressor inducer (OEM supplier: possibly Garrett or BorgWarner — conflicting sources) |
 | Configuration | Both turbos spool simultaneously, each feeds 3 cylinders (one per V6 bank) |
 | Wastegate | Electronic — commanded position control, not traditional duty-cycle vacuum |
 | Stock Boost | 17–18 PSI normal, overboost to ~20 PSI |
@@ -83,8 +90,9 @@ The Ford 3.0L EcoBoost is a twin-turbocharged 60-degree V6 engine. In the Ranger
 | Parameter | Value |
 |-----------|-------|
 | Injection | Direct injection (GDI), 6 injectors |
+| Fuel Pressure | Up to 250 bar (3,625 PSI) |
 | HPFP | Mechanically driven high-pressure fuel pump |
-| No port injection | GDI only (DI-only design) |
+| No port injection | GDI only — carbon buildup requires walnut blast at 40–80k miles |
 | Stock fuel system ceiling | ~450–500 whp on 93 octane |
 | E85 limitation | Stock HPFP maxes out with E85 even on stock turbos |
 
@@ -115,6 +123,8 @@ Available in **Baja mode** on the Ranger Raptor:
 - **Cam phaser failure:** Premature failure reported in 2021–2024 Explorer ST and Bronco Raptor, causing diesel-like rattle on cold start
 - **LSPI (Low Speed Pre-Ignition):** Risk with DI turbo engines, especially under high load at low RPM. Use API SP rated oil.
 - **Oil quality sensitivity:** Strict adherence to oil change intervals required
+- **Oil pan leaks:** Design flaw on early production, fixed post-2019
+- **Carbon buildup:** DI-only engine, walnut blast recommended at 40–80k miles
 
 ### Turbocharger
 - **Wastegate rattle:** Common across EcoBoost platform. Ford TSB 20-2016 and spring washer kit (P/N HL3Z-9G488-C) available
@@ -128,13 +138,32 @@ Available in **Baja mode** on the Ranger Raptor:
 - **Sensitivity to modifications:** Rapid decline in trans health with 33"+ tires
 - Ford has moved to the 10R60 in some newer Rangers
 
+## Ranger Raptor Vehicle Details (2024–2026)
+
+| Parameter | Value |
+|-----------|-------|
+| Platform | T6.2, body-on-frame, SuperCrew only |
+| Curb Weight | ~5,325 lbs |
+| Fuel Tank | 20.3 gallons |
+| Towing Capacity | 5,510 lbs |
+| Transfer Case | Electronic 2-speed (2H, AWD, 4H, 4L) |
+| Front Differential | Electronic locking |
+| Rear Differential | Electronic locking, 8.9" ring gear |
+| Axle Ratio | 4.27:1 |
+| Suspension | FOX 2.5" Live Valve (10" front travel, 11" rear), Watts linkage rear |
+| Drive Modes | Normal, Tow/Haul, Sport, Slippery, Off-Road, Rock Crawl, Baja (7 total) |
+| Active Exhaust | 4 modes: Quiet, Normal, Sport, Baja |
+| Model Year Changes | Powertrain identical 2024–2026; minor trim/color/feature updates only |
+
 ## 10R80 Transmission
 
 | Parameter | Value |
 |-----------|-------|
 | Type | 10-speed automatic (torque converter) |
 | Development | Joint Ford/GM |
+| Torque Rating | 590 lb-ft / 800 Nm |
 | Gear Ratio Spread | 7.39:1 with 4.70:1 first gear |
+| Stock Internal Limit | ~550 whp before rebuild recommended |
 | TCM Tuning | HP Tuners supported (separate credits) |
 | Profiles | Up to 3 transmission profiles per tune |
 | Drive Mode Calibration | Shift schedule and TCC lock schedule per drive mode |
