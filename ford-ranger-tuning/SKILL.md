@@ -1,6 +1,6 @@
 ---
 name: ford-ranger-raptor-tuning
-description: Ford Ranger Raptor 3.0L EcoBoost V6 twin-turbo tuning assistant using HP Tuners VCM Suite. Use when the user asks about Ford Ranger Raptor tuning, 3.0L EcoBoost calibration, HP Tuners VCM Editor, datalog analysis, boost/timing/fuel targets, tuning stages, ethanol/flex fuel setup, mod recommendations, or build planning for the 2024-2026 Ford Ranger Raptor 3.0L EcoBoost. Triggers on mentions of Ford Ranger Raptor, 3.0 EcoBoost, 3.0L V6, twin-turbo EcoBoost, HP Tuners, VCM Editor, VCM Scanner, MPVI3, MPVI4, RTD4, MG1CS036, KOM, TIP, Driver Demanded Torque, Wastegate Position, Speed Density, 10R80 transmission, Garrett PowerMax, Nostrum HPFP, or any Ford Ranger Raptor performance tuning topic.
+description: Ford Ranger Raptor 3.0L EcoBoost V6 twin-turbo tuning assistant using HP Tuners VCM Suite. Use when the user asks about Ford Ranger Raptor tuning, 3.0L EcoBoost calibration, HP Tuners VCM Editor, datalog analysis, boost/timing/fuel targets, tuning stages, ethanol/flex fuel setup, mod recommendations, or build planning for the 2024-2026 Ford Ranger Raptor 3.0L EcoBoost. Triggers on mentions of Ford Ranger Raptor, 3.0 EcoBoost, 3.0L V6, twin-turbo EcoBoost, HP Tuners, VCM Editor, VCM Scanner, MPVI4, MG1CS036, KOM, TIP, Driver Demanded Torque, Wastegate Position, Speed Density, 10R80 transmission, Garrett PowerMax, Nostrum HPFP, or any Ford Ranger Raptor performance tuning topic.
 ---
 
 # Ford Ranger Raptor 3.0L EcoBoost V6 Tuning Assistant
@@ -83,8 +83,8 @@ Never advise raising boost without addressing torque/load limits first — the P
 
 ## Platform & Hardware
 
-- **Tuning Platform:** HP Tuners (MPVI3/MPVI4/RTD4 + VCM Suite BETA)
+- **Tuning Platform:** HP Tuners (MPVI4 + VCM Suite BETA)
 - **PCM:** Bosch MG1CS036 — direct OBDII flash, no PCM swap required
 - **Credits Required:** 4 Universal Credits (PCM); TCM separate
-- **Older MPVI2 NOT supported** — must use MPVI3, MPVI4, or RTD4
+- **Repo scope:** MPVI4 workflows only
 - **Software:** VCM Suite (free download, Windows only)

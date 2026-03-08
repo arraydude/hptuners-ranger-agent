@@ -25,7 +25,7 @@ Shared engine with Bronco Raptor (418 HP), Explorer ST (400 HP), Lincoln Aviator
 - **Speed Density airflow**: MAP-based, no MAF primary. VVE (Virtual Volumetric Efficiency) abstraction.
 - **KOM (Knock Octane Modifier)**: Dynamic fuel quality adaptation. KOM = +1 is optimal, -1 = bad fuel or aggressive tune.
 - **Boost/Spark Swap**: ECU dynamically trades between boost and spark — normal behavior.
-- **HP Tuners VCM Suite (BETA)**: MG1CS036 direct OBDII flash. MPVI3/MPVI4/RTD4 only. 4 credits per PCM.
+- **HP Tuners VCM Suite (BETA)**: MG1CS036 direct OBDII flash. This repo standardizes on MPVI4 workflows. 4 credits per PCM.
 - **LSPI Protection**: 3 load limit tables blended by KOM. Never disable.
 - **CGI Block + Forged Internals**: Robust bottom end, 700+ whp demonstrated on stock internals.
 
@@ -42,4 +42,6 @@ Shared engine with Bronco Raptor (418 HP), Explorer ST (400 HP), Lincoln Aviator
 | `ford-30-ecoboost-tuning-guide.md` | Torque model, HDFX modes, KOM, spark sources, specific table numbers (861, 1775, 3634, 7719, etc.), datalog parameters, tuning methodology |
 | `ford-ranger-raptor-30-build-path.md` | Stage 1–4 progression with verified dyno results, Nostrum fuel system, Garrett PowerMax turbos, tuning providers |
 | `hptuners-platform-overview.md` | HP Tuners platform: VCM Editor, VCM Scanner, MPVI hardware, credits/licensing |
+| `hptuners-ford-official-validation.md` | Official-source validation note using HP Tuners and Ford primary materials only |
+| `hptuners-community-forum-notes.md` | Forum-based community findings for HP Tuners tuning on Ranger Raptor / Bronco Raptor 3.0 platforms |
 | `ranger-raptor-3.0-ecoboost-tuning-research.md` | Raw community research compilation |

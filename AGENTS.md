@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
@@ -43,7 +43,7 @@ Shared engine with Bronco Raptor (418 HP), Explorer ST (400 HP), Lincoln Aviator
 ## Directory Structure
 
 - `sources/` — Synthesized reference material (markdown)
-- `ford-ranger-tuning/` — Claude Code skill (SKILL.md + references/)
+- `ford-ranger-tuning/` — Codex skill (SKILL.md + references/)
 
 ## Official PDFs (read with pdftotext via Bash, not the Read tool)
 

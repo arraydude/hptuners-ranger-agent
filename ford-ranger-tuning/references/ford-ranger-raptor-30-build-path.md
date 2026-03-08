@@ -175,7 +175,7 @@
 
 | Platform | Type | Notes |
 |----------|------|-------|
-| **HP Tuners** (MPVI3/MPVI4/RTD4) | Full custom — VCM Editor + VCM Scanner | Most popular for custom tuning. 4 credits PCM, TCM separate. VCM Suite BETA for MG1CS036. |
+| **HP Tuners** (repo focus: MPVI4) | Full custom — VCM Editor + VCM Scanner | Most popular for custom tuning. 4 credits PCM, TCM separate. VCM Suite BETA for MG1CS036. |
 | **COBB Accessport** | OTS maps + custom | Pre-loaded maps (Stage 0/1/2) + ProTuning. CARB exempt maps available. |
 | **Livernois MyCalibrator** | Proprietary | Engineering-level logging, multiple tune levels |
 | **Ford Performance ProCal4** | Official | Part M-9603-REB30. Warranty-safe, CARB legal. |

@@ -60,7 +60,7 @@ The Ford 3.0L EcoBoost is a twin-turbocharged 60-degree V6 engine. In the Ranger
 | Control Strategy | Torque-based (Driver Demanded Torque) |
 | Throttle | Drive-by-Wire (DBW) |
 | Boost Control | Electronic wastegate position control (commanded position, not traditional vacuum WGDC) |
-| HP Tuners Support | VCM Suite (BETA), MPVI3/MPVI4/RTD4 only |
+| HP Tuners Support | VCM Suite (BETA); repo workflow targets MPVI4 |
 | Credits Required | 4 Universal Credits (PCM); TCM separate |
 
 **MG1CS036 breakthrough:** Ford designed this ECU to resist aftermarket tuning. HP Tuners achieved direct OBDII flashing (no PCM swap/unlock required) — announced ~July 2025, first-to-market OBDII flash solution.
